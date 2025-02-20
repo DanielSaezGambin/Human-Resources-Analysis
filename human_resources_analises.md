@@ -1,5 +1,4 @@
-> **Base de datos utilizada:** `mi_base_de_datos`
-> **Descripción:** Conjunto de datos de clientes con información de compras.
+> **Database used:** `Human Resources`
 
 ## 1. **Renaming the "human resources" table to avoid issues with spaces:**
 
@@ -22,7 +21,7 @@ This gives us a total of 22,214 records.
 
 ## 3. **Checking the table structure:**
 
-![alt text](image.png)
+![alt text](Images/image.png)
 
 A quick look reveals some issues with data encoding.
 
@@ -71,7 +70,7 @@ We modify these variables:
 
 ### 4.3 **birthday and hire_date Columns**
 
-![alt text](image-1.png)
+![alt text](Images/image-1.png)
 
 The birthday column contains dates in the MM-DD-YYYY and MM/DD/YYYY formats. The following code converts both formats to DD-MM-YYYY.
 
@@ -88,7 +87,7 @@ END;
 
 After executing this command, we standardize the column, obtaining the following result:
 
-![alt text](image-2.png)
+![alt text](Images/image-2.png)
 
 
 A similar issue occurs with the hire_date column. We apply an equivalent transformation:
@@ -199,7 +198,7 @@ FROM active_workers
 GROUP BY gender
 ```
 
-![alt text](image-5.png)
+![alt text](Images/image-5.png)
 
 We have a total of 50.97% men, 46.28% women, and the rest non-binary.
 
@@ -215,7 +214,7 @@ GROUP BY race
 ORDER BY 3 DESC;
 ```
 
-![alt text](image-6.png)
+![alt text](Images/image-6.png)
 
 
 ### 5.3 Age Distribution of Employees
@@ -229,7 +228,7 @@ SELECT
 FROM active_workers;
 ```
 
-![alt text](image-7.png)
+![alt text](Images/image-7.png)
 
 We create age categories:
 
@@ -248,7 +247,7 @@ GROUP BY age_cat
 ORDER BY COUNT(*) DESC;
 ```
 
-![alt text](image-8.png)
+![alt text](Images/image-8.png)
 
 ### 5.4 Comparison of the Number of Employees at Headquarters and Remote Locations.
 
@@ -256,7 +255,7 @@ ORDER BY COUNT(*) DESC;
 SELECT location, COUNT(*) FROM active_workers
 GROUP BY location
 ```
-![alt text](image-9.png)
+![alt text](Images/image-9.png)
 
 ### 5.5 Average Job Tenure for Terminated Employees.
 
@@ -266,7 +265,7 @@ FROM human_resources
 WHERE termdate < curdate() AND age>=18;
 ```
 
-![alt text](image-10.png)
+![alt text](Images/image-10.png)
 
 ### 5.6 Gender Distribution Variation Across Departments and Job Titles.  
 
@@ -276,7 +275,7 @@ FROM human_resources
 GROUP BY department, gender;
 ```
 
-![alt text](image-11.png)
+![alt text](Images/image-11.png)
 
 ### 5.7 Job Title Distribution Across the Company.  
 
@@ -286,7 +285,7 @@ FROM active_workers
 GROUP BY jobtitle;
 ```
 
-![alt text](image-12.png)
+![alt text](Images/image-12.png)
 
 ### 5.8 Department with the Highest Turnover Rate.  
 
@@ -305,7 +304,7 @@ FROM(
     AS subquery
 ORDER BY termination_rate DESC;
 ```
-![alt text](image-13.png)
+![alt text](Images/image-13.png)
 
 ### 5.9 Employee Distribution by Location by State.  
 
@@ -315,7 +314,7 @@ FROM active_workers
 GROUP BY location_state
 ORDER BY COUNT(*) DESC;
 ```
-![alt text](image-14.png)
+![alt text](Images/image-14.png)
 
 
 ### 5.10 Evolution of the Number of Employees Based on Hiring and Termination Dates.  
@@ -338,7 +337,7 @@ FROM(
 ORDER BY year ASC;
 ```
 
-![alt text](image-15.png)
+![alt text](Images/image-15.png)
 
 ### 5.11 Tenure Distribution by Department.
 
@@ -356,11 +355,11 @@ GROUP BY department
 ORDER BY average_years_working DESC;
 ```
 
-![alt text](image-16.png)
+![alt text](Images/image-16.png)
 
 
 ## 6. Results
 
 After completing the calculations, we can export the query results to a .CSV file and create a simple Power BI dashboard to present the findings.
 
-![alt text](image-17.png)
+![alt text](Images/image-17.png)
