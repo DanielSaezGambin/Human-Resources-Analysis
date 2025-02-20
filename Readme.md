@@ -4,7 +4,7 @@
 
 In this project, I analyzed employee data using SQL to extract key insights about workforce distribution, hiring trends, turnover rates, and job longevity. The dataset was processed through various SQL queries to explore gender distribution, job roles, departmental trends, and employee retention. The results were then visualized in Power BI, creating a comprehensive dashboard for data-driven decision-making.
 
-  **Data and project idea were extracted from** [enlace](https://github.com/Irene-arch/HR-Dashboard-MySQL-PowerBI)
+  Data and project idea were extracted from [here](https://github.com/Irene-arch/HR-Dashboard-MySQL-PowerBI)
 
 
 
