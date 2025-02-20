@@ -34,7 +34,7 @@ A quick look reveals some issues with data encoding.
 
 ## 4. **Re-encoding**
 
-### 4.1 **id Column**
+### 4.1 **Id column**
    
    Since this will be our primary key, we start by checking that there are no null values:
 
@@ -58,7 +58,7 @@ We define id as a primary key, with unique and non-null values (we also need to 
 	ADD PRIMARY KEY (id);
 ```
 
-### 4.2 **first_name and last_name Columns**
+### 4.2 **first_name and last_name columns**
 
 We check that there are no records with empty first or last names:
 
@@ -75,7 +75,7 @@ We modify these variables:
     MODIFY last_name VARCHAR(60) NOT NULL, 
 ```
 
-### 4.3 **birthday and hire_date Columns**
+### 4.3 **birthday and hire_date columns**
 
 ![alt text](Images/image-1.png)
 
@@ -145,7 +145,7 @@ MODIFY location_state VARCHAR(100);
 ```
 
 
-### 4.5 **Age Column**
+### 4.5 **Age column**
 
 We want to create a column representing the employee's age. We use the following command:
 
@@ -167,7 +167,7 @@ ELSE age
 END;
 ```
 
-### 4.6 **termdate Column**
+### 4.6 **termdate column**
 
 We remove the UTC part, convert empty values to NULL, and change the data type to DATETIME:
 
@@ -367,6 +367,6 @@ ORDER BY average_years_working DESC;
 
 ## 6. Results
 
-After completing the calculations, we can export the query results to a .CSV file and create a simple Power BI dashboard to present the findings.
+After completing the calculations, we can export the query results to CSV files and create a simple Power BI dashboard to present the findings (accessible in report.pbix).
 
 ![alt text](Images/image-17.png)
