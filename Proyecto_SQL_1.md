@@ -22,7 +22,7 @@ Esto nos da un total de *22,214* registros.
 
 ## 3. **Comprobamos la estructura de la tabla:**
 
-![alt text](image.png)
+![alt text](images/image.png)
 
 Un vistazo rápido revela algunos problemas en la codificación de los datos.
 
