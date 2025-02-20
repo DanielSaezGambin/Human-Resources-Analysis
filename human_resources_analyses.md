@@ -1,4 +1,11 @@
+
+
+# **Employee Data Analysis with SQL and Power BI**
+
+In this project, I analyzed employee data using SQL to extract key insights about workforce distribution, hiring trends, turnover rates, and job longevity. The dataset was processed through various SQL queries to explore gender distribution, job roles, departmental trends, and employee retention. The results were then visualized in Power BI, creating a comprehensive dashboard for data-driven decision-making.
+
 > **Database used:** `Human Resources`
+
 
 ## 1. **Renaming the "human resources" table to avoid issues with spaces:**
 
